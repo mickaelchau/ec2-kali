@@ -1,14 +1,13 @@
 locals {
   application_name = "kali-linux"
-  keys_type        = "RSA"
+  key_name        = "kali"
 
-  region               = "eu-west-3"
+  region                    = "eu-west-3"
   image_virtualization_type = "hvm"
 
-  ec2_keys_name = "${local.application_name}-key"
   instance_ami  = "ami-019165e97403b6aa2"
   instance_type = "t2.medium"
-  volume_size = "50"
+  volume_size   = "50"
 
   all_addresses = ["176.158.178.129/32"]
 
